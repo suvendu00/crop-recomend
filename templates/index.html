@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your Machine Learning App</title>
+    </head>
+    
+    <body>
+        <form name="form", method="POST", style="text-align: center;">
+            <p>N: <input type="number" name="N", placeholder="Enter N" required/></p>
+            <p>P: <input type="number" name="P", placeholder="Enter P" required/></p>
+            <p>K: <input type="number" name="K", placeholder="Enter K" required/></p>
+            <p>Temperature: <input type="number" name="Temperature", placeholder="Enter Temperature" required/></p>
+            <p>Humidity: <input type="number" name="Humidity", placeholder="Enter Humidity" required/></p>
+            <p>pH: <input type="number" name="pH", placeholder="Enter pH" required/></p>
+            <p>Rainfall: <input type="number" name="Rainfall", placeholder="Enter Rainfall" required/></p>
+            <button value="Submit">Run</button>
+        </form>
+        <div>
+            <p id="out" style="text-align: center; font-size: 40px">{{ output }}</p>
+        </div>
+        <div >
+            <p id="outtext"> HI</p>
+        </div>
+        <script>
+            let xx = '{{ output }}';
+            xx += " is the predicted crop";
+            document.getElementById("outtext").innerHTML = xx;
+        </script>
+    </body>
+</html>
